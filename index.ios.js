@@ -6,12 +6,24 @@ import {
   StyleSheet,
   Text,
   Button,
-  View
+  View,
+  NativeModules,
+  NativeEventEmitter
 } from 'react-native';
+
+const {Device} = NativeModules;
+const calendarManagerEmitter = new NativeEventEmitter(Device);
+const subscription = calendarManagerEmitter.addListener(
+  'EventTesting',
+  (reminder) => alert(reminder.name)
+);
 
 class RNHighScores extends React.Component {
   showAlert() {
-    alert('Hi, i\'m alert view controller.');
+    Device.log('hello, native.');
+    Device.constants((error, events) => {
+      alert(events);
+    });
   }
 
   render() {

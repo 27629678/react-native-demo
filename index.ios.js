@@ -5,14 +5,20 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  Button,
   View
 } from 'react-native';
 
 class RNHighScores extends React.Component {
+  showAlert() {
+    alert('Hi, i\'m alert view controller.');
+  }
+
   render() {
     var contents = this.props["scores"].map(
       score => <Text key={score.name}>{score.name}:{score.value}{"\n"}</Text>
     );
+
     return (
       <View style={styles.container}>
         <Text style={styles.highScoresTitle}>
@@ -21,6 +27,7 @@ class RNHighScores extends React.Component {
         <Text style={styles.scores}>
           {contents}
         </Text>
+        <Button onPress={this.showAlert} title='Alert'/>
       </View>
     );
   }

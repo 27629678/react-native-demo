@@ -11,6 +11,9 @@ target 'demo' do
     'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
     'RCTText',
     'RCTNetwork',
+    'RCTImage',
+    'RCTAnimation',
+    'RCTActionSheet',
     'RCTWebSocket', # needed for debugging
     'BatchedBridge',
     # Add any other subspecs you want to use in your project

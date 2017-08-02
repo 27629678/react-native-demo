@@ -11,6 +11,9 @@ import {
   NativeEventEmitter
 } from 'react-native';
 
+
+import NEWebView from './webview';
+
 const {Device} = NativeModules;
 const calendarManagerEmitter = new NativeEventEmitter(Device);
 const subscription = calendarManagerEmitter.addListener(
@@ -39,6 +42,7 @@ class RNHighScores extends React.Component {
         <Text style={styles.scores}>
           {contents}
         </Text>
+        <NEWebView url='http://www.bing.com' style={styles.webview}/>
         <Button onPress={this.showAlert} title='Alert'/>
       </View>
     );
@@ -62,6 +66,10 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  webview: {
+    width:320,
+    height:200,
+  }
 });
 
 // Module name

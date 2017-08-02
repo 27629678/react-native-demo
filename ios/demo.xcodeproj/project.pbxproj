@@ -17,6 +17,7 @@
 		DA1072011F2F2C87003834D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1072001F2F2C87003834D9 /* Foundation.framework */; };
 		DA1072031F2F2C95003834D9 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1072021F2F2C95003834D9 /* JavaScriptCore.framework */; };
 		DA4E27961F307FB800E4010D /* NEPlatformManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4E27951F307FB800E4010D /* NEPlatformManager.m */; };
+		DA4E27A51F316B9A00E4010D /* NEWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4E27A41F316B9A00E4010D /* NEWebViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		DA1072021F2F2C95003834D9 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		DA4E27941F307FB800E4010D /* NEPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEPlatformManager.h; sourceTree = "<group>"; };
 		DA4E27951F307FB800E4010D /* NEPlatformManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEPlatformManager.m; sourceTree = "<group>"; };
+		DA4E27A31F316B9A00E4010D /* NEWebViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEWebViewManager.h; sourceTree = "<group>"; };
+		DA4E27A41F316B9A00E4010D /* NEWebViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEWebViewManager.m; sourceTree = "<group>"; };
 		DAABFD0B1F2F304B00AC8A51 /* libReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libReact.a; path = "Pods/../build/Debug-iphoneos/React/libReact.a"; sourceTree = "<group>"; };
 		DAABFD0D1F2F305000AC8A51 /* libYoga.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libYoga.a; path = "Pods/../build/Debug-iphoneos/Yoga/libYoga.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +111,8 @@
 				DA0796951F2F23CC00E9B4E6 /* Supporting Files */,
 				DA4E27941F307FB800E4010D /* NEPlatformManager.h */,
 				DA4E27951F307FB800E4010D /* NEPlatformManager.m */,
+				DA4E27A31F316B9A00E4010D /* NEWebViewManager.h */,
+				DA4E27A41F316B9A00E4010D /* NEWebViewManager.m */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4E27A51F316B9A00E4010D /* NEWebViewManager.m in Sources */,
 				DA07969D1F2F23CC00E9B4E6 /* ViewController.m in Sources */,
 				DA4E27961F307FB800E4010D /* NEPlatformManager.m in Sources */,
 				DA07969A1F2F23CC00E9B4E6 /* AppDelegate.m in Sources */,

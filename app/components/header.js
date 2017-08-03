@@ -1,3 +1,11 @@
+'use strict';
+
+/* ******************************************
+ *
+ * TextInput与TextField的渲染结果不一样
+ *
+ * ******************************************/
+
 import React from 'react'
 import {
   View,

@@ -7,7 +7,7 @@ import {
 
 import HeaderContainer from './components/header'
 import BodyContainer from './components/body'
-import Footer from './components/footer'
+import FooterContainer from './components/footer'
 
 class AppContainer extends Component {
 
@@ -15,7 +15,7 @@ class AppContainer extends Component {
     return <View style={styles.container}>
       <HeaderContainer />
       <BodyContainer />
-      <Footer />
+      <FooterContainer />
     </View>
   }
 }

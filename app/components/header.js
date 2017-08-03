@@ -17,7 +17,7 @@ import {
 
 import { connect } from 'react-redux'
 
-import add_content from '../actions'
+import {add_content} from '../actions'
 
 class Header extends React.Component {
 

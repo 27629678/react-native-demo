@@ -7,12 +7,14 @@ import {
   StyleSheet,
 } from 'react-native'
 
+import { connect } from 'react-redux'
+
 class Body extends React.Component {
   render() {
     return <View style={styles.container}>
       <View style={styles.h_stack}>
         <Text>
-          A foundational component for inputting text into the app via a keyboard. Props provide configurability for several features, such as auto-correction, auto-capitalization, placeholder text, and different keyboard types, such as a numeric keypad.
+          {this.props.content}
         </Text>
       </View>
     </View>
@@ -28,9 +30,17 @@ const styles = StyleSheet.create({
 
   h_stack: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   }
 });
 
-export default Body
+const mapStateToProps = state => {
+  return {
+    content: state.content,
+  }
+}
+
+const BodyContainer = connect(mapStateToProps)(Body);
+
+export default BodyContainer

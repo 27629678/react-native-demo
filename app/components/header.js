@@ -15,6 +15,10 @@ import {
   StyleSheet,
 } from 'react-native'
 
+import { connect } from 'react-redux'
+
+import add_content from '../actions'
+
 class Header extends React.Component {
 
   constructor(props) {
@@ -36,7 +40,8 @@ class Header extends React.Component {
           placeholder='input'
           style={styles.textInput}
           onChangeText={this.onTextChange.bind(this)}
-          value={this.state.text}
+          value={ this.state.text }
+          placeholder={this.props.text}
           autoCorrect={false}
           >
         </TextInput>
@@ -44,11 +49,17 @@ class Header extends React.Component {
 
       <Button
        title='ADD'
-       onPress={() => {console.log(this.state.text);} }
+       onPress={() => {
+         this.setState({
+           text:''
+         });
+         this.props.onAddBtnClick(this.state.text);
+       } }
        style={styles.searchBtn}
        />
     </View>
   }
+
 }
 
 const styles = StyleSheet.create({
@@ -75,4 +86,18 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Header
+const mapStateToProps = state => {
+  return { text: state.text };
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onAddBtnClick: text => {
+      dispatch(add_content(text));
+    }
+  }
+}
+
+const HeaderContainer = connect(mapStateToProps, mapDispatchToProps)(Header)
+
+export default HeaderContainer

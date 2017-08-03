@@ -16,14 +16,14 @@ class Footer extends React.Component {
   render() {
     return <View style={styles.container}>
       <View style={styles.v_stack}>
-        <View style={styles.h_stack}>
-          <Text>当前已选择分隔符号：{this.props.seprator}</Text>
+        <View style={[styles.h_stack, styles.text]}>
+          <Text style={{color:"#841584"}}>当前已选择分隔符号：{this.props.seprator}</Text>
         </View>
 
         <View style={styles.h_stack}>
-          <Button title='    +    ' onPress={()=>{this.props.onBtnClick('+')}} />
-          <Button title='    -    ' onPress={()=>{this.props.onBtnClick('-')}} />
-          <Button title='    &    ' onPress={()=>{this.props.onBtnClick('&')}} />
+          <Button color="#841584" title='    +    ' onPress={()=>{this.props.onBtnClick('+')}} />
+          <Button color="#841584" title='    -    ' onPress={()=>{this.props.onBtnClick('-')}} />
+          <Button color="#841584" title='    &    ' onPress={()=>{this.props.onBtnClick('&')}} />
         </View>
       </View>
     </View>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     height:80,
-    backgroundColor: 'lightgray',
+    // backgroundColor: 'lightgray',
   },
 
   v_stack: {
@@ -48,7 +48,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-  }
+  },
+
+  text: {
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    paddingLeft:10,
+  },
+
 });
 
 const mapStateToProps = state => {
